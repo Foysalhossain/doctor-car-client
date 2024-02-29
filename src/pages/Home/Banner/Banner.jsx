@@ -15,8 +15,8 @@ function Banner() {
                             There are many variations of passages of  available, but the majority have suffered alteration in some form
                         </p>
                         <div>
-                            <button className="btn btn-error mr-5">Discover More</button>
-                            <button className="btn btn-outline btn-primary">Latest Project</button>
+                            <button className="btn btn-error text-white mr-5">Discover More</button>
+                            <button className="btn btn-outline btn-secondary">Latest Project</button>
                         </div>
                     </div>
                 </div>
@@ -34,8 +34,8 @@ function Banner() {
                             There are many variations of passages of  available, but the majority have suffered alteration in some form
                         </p>
                         <div>
-                            <button className="btn btn-error mr-5">Discover More</button>
-                            <button className="btn btn-outline btn-primary">Latest Project</button>
+                            <button className="btn btn-error text-white mr-5">Discover More</button>
+                            <button className="btn btn-outline btn-secondary">Latest Project</button>
                         </div>
                     </div>
                 </div>
@@ -53,8 +53,8 @@ function Banner() {
                             There are many variations of passages of  available, but the majority have suffered alteration in some form
                         </p>
                         <div>
-                            <button className="btn btn-error mr-5">Discover More</button>
-                            <button className="btn btn-outline btn-primary">Latest Project</button>
+                            <button className="btn btn-error text-white mr-5">Discover More</button>
+                            <button className="btn btn-outline btn-secondary">Latest Project</button>
                         </div>
                     </div>
                 </div>
@@ -72,8 +72,8 @@ function Banner() {
                             There are many variations of passages of  available, but the majority have suffered alteration in some form
                         </p>
                         <div>
-                            <button className="btn btn-error mr-5">Discover More</button>
-                            <button className="btn btn-outline btn-primary">Latest Project</button>
+                            <button className="btn btn-error text-white mr-5">Discover More</button>
+                            <button className="btn btn-outline btn-secondary">Latest Project</button>
                         </div>
                     </div>
                 </div>
