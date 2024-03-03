@@ -1,7 +1,7 @@
 import person from '../../../assets/images/about_us/person.jpg';
 import parts from '../../../assets/images/about_us/parts.jpg';
 
-function About() {
+const About = () =>  {
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row">

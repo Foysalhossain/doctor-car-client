@@ -3,7 +3,7 @@ import img2 from '../../../assets/images/banner/2.jpg';
 import img3 from '../../../assets/images/banner/3.jpg';
 import img4 from '../../../assets/images/banner/4.jpg';
 
-function Banner() {
+const  Banner =() => {
     return (
         <div className="carousel w-full h-[600px]">
             <div id="slide1" className="carousel-item relative w-full h-[600px]">
