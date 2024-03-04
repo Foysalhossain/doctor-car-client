@@ -23,7 +23,6 @@ const CheckOut = () => {
             service_id: _id,
             price: price
         }
-
         console.log(booking);
 
         fetch('http://localhost:5000/bookings', {
@@ -37,6 +36,7 @@ const CheckOut = () => {
             .then(data => {
                 console.log(data);
                 if (data.insertedId) {
+                    // use sweet alert
                     Swal.fire({
                         title: "Good job!",
                         text: "Service book successfully!",
