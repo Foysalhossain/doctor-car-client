@@ -12,7 +12,7 @@ const Bookings = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setBookings(data))
-    }, []);
+    }, [url]);
 
     const handleDelete = id => {
         fetch(`http://localhost:5000/bookings/${id}`, {
@@ -24,7 +24,7 @@ const Bookings = () => {
                 if (data.deletedCount > 0) {
                     Swal.fire({
                         title: "Are you sure?",
-                        text: "You won't be able to revert this!",
+                        text: "You won't to delete it!",
                         icon: "warning",
                         showCancelButton: true,
                         confirmButtonColor: "#3085d6",
@@ -41,6 +41,28 @@ const Bookings = () => {
                     });
                     const remaining = bookings.filter(booking => booking._id !== id);
                     setBookings(remaining);
+                }
+            })
+    }
+
+    const handleBookingConfirm = id => {
+        fetch(`http://localhost:5000/bookings/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ status: 'confirm' })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    // update state
+                    const remaining = bookings.filter(booking => booking._id !== id);
+                    const update = bookings.find(booking => booking._id === id);
+                    update.status = 'confirm'
+                    const newBookings = [update, ...remaining];
+                    setBookings(newBookings);
                 }
             })
     }
@@ -71,6 +93,7 @@ const Bookings = () => {
                                 key={booking._id}
                                 booking={booking}
                                 handleDelete={handleDelete}
+                                handleBookingConfirm={handleBookingConfirm}
                             ></BookingRow>)
                         }
                     </tbody>
