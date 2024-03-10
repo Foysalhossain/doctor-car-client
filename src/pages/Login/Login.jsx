@@ -25,13 +25,16 @@ const Login = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser);
-                const user = {email};
-                // navigate(location?.state ? location?.state : "/");
+                const user = { email };
                 // get access token
-                axios.post('http://localhost:5000/jwt', user)
-                .then(res => {
-                    console.log(res.data);
-                })
+                axios.post('http://localhost:5000/jwt', user,
+                    {withCredentials: true})
+                    .then(res => {
+                        console.log(res.data);
+                        if (res.data.success) {
+                            navigate(location?.state ? location?.state : "/");
+                        }
+                    })
 
                 if (loggedInUser.uid) {
                     // use sweet alert
